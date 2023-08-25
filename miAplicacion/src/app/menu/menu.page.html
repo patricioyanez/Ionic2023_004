@@ -11,11 +11,22 @@
   </ion-list-header>
 
   <ion-item>
-    <ion-button ><!-- https://ionic.io/ionicons -->
+    <ion-button [routerLink]="['/uno']" ><!-- https://ionic.io/ionicons -->
       <ion-icon slot="end" name="arrow-forward-circle"></ion-icon>
-      Ver botones
+      Ver Lista y botones
     </ion-button>
   </ion-item>
-
+  <ion-item>
+    <ion-button [routerLink]="['/dos']" ><!-- https://ionic.io/ionicons -->
+      <ion-icon slot="end" name="arrow-forward-circle"></ion-icon>
+      Pagina en blanco
+    </ion-button>
+  </ion-item>  
+  <ion-item>
+    <ion-button [routerLink]="['/tres']" ><!-- https://ionic.io/ionicons -->
+      <ion-icon slot="end" name="arrow-forward-circle"></ion-icon>
+      Ver Input
+    </ion-button>
+  </ion-item>
 </ion-list>
 </ion-content>

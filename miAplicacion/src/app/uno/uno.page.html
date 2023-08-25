@@ -1,6 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Primera página</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -21,11 +25,30 @@
     </ion-item>
   </ion-list> 
 
+  <h1>Botones</h1>
+  <ion-button>Aceptar</ion-button>
+  <ion-button expand="block">Aceptar</ion-button>
+  <ion-button shape="round">Aceptar</ion-button>
+  <ion-button fill="outline" shape="round">Aceptar</ion-button>
+  <br>
+  <ion-button size="small">Aceptar</ion-button>
+  <ion-button size="large">Aceptar</ion-button>
+
+  <ion-button color="success">Aceptar</ion-button>
+  <ion-button color="warning">Aceptar</ion-button>
+  <ion-button color="danger">Aceptar</ion-button>
+  <ion-button color="tertiary">Aceptar</ion-button>
+  <ion-button color="medium">Aceptar</ion-button>
+  <ion-button color="dark" size="large">Aceptar</ion-button>
+
 
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
     <ion-title>Este es el footer</ion-title>
   </ion-toolbar>
 </ion-footer>

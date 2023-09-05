@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ocho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Promedio de Notas</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Nota 1</ion-label>
+      <input type="number" [(ngModel)]="n1">
+    </ion-item>
+    <ion-item>
+      <ion-label>Nota 2</ion-label>
+      <input type="number" [(ngModel)]="n2">
+    </ion-item>
+    <ion-item>
+      <ion-label>Nota 3</ion-label>
+      <input type="number" [(ngModel)]="n3">
+    </ion-item>
+    <ion-item button (click)="promediar()" 
+                      class="ion-text-center" 
+                      color="primary">
+      <ion-label>Promediar</ion-label>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="promedio">
+  <ion-text color="success" *ngIf="promedio >= 40, else reprobo" class="ion-text-center">
+    <h1>Aprobó con nota {{promedio| number: '1.0-0' }}</h1>
+  </ion-text>
+  <ng-template #reprobo>
+    <ion-text color="danger" class="ion-text-center">
+      <h1>Ud reprobó con nota {{promedio| number: '1.0-0' }}</h1>
+    </ion-text>
+  </ng-template>
+  </div>
+</ion-content>

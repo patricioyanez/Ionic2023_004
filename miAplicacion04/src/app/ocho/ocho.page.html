@@ -1,31 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>ocho</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <ion-list>
-    <ion-list-header>
-      <ion-label>Promedio de Notas</ion-label>
+    <ion-list-header >
+      <ion-label color="primary" class="ion-text-center">Promedio de Notas</ion-label>
     </ion-list-header>
     <ion-item>
       <ion-label>Nota 1</ion-label>
-      <input type="number" [(ngModel)]="n1">
+      <input type="number" min="10" max="70" onKeyPress="if(this.value.length==2) return false;" [(ngModel)]="n1">
     </ion-item>
     <ion-item>
       <ion-label>Nota 2</ion-label>
-      <input type="number" [(ngModel)]="n2">
+      <input type="number" min="10" max="70" onkeypress="if(this.value.length==2) return false;" [(ngModel)]="n2">
     </ion-item>
     <ion-item>
       <ion-label>Nota 3</ion-label>
-      <input type="number" [(ngModel)]="n3">
+      <input type="number" min="10" max="70" onkeypress="if(this.value.length==2) return false;" [(ngModel)]="n3">
     </ion-item>
     <ion-item button (click)="promediar()" 
                       class="ion-text-center" 
                       color="primary">
       <ion-label>Promediar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="promedio=n1=n2=n3=''">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
   <div *ngIf="promedio">
@@ -39,3 +47,12 @@
   </ng-template>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Promedio de notas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

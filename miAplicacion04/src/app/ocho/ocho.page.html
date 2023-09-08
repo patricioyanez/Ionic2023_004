@@ -35,6 +35,11 @@
         <ion-icon slot="icon-only" name="trash"></ion-icon>
       </ion-button>
     </ion-item>
+    <ion-item>
+      <ion-button (click)="enviarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-list>
   <div *ngIf="promedio">
   <ion-text color="success" *ngIf="promedio >= 40, else reprobo" class="ion-text-center">

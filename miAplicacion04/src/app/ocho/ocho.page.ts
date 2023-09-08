@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ocho',
@@ -12,7 +13,9 @@ export class OchoPage implements OnInit {
   n3: string = '';
   promedio :any;
   
-  constructor(private alertController:AlertController ) { }
+  constructor(private alertController:AlertController, 
+              private toastController:ToastController,
+              private router: Router ) { }
 
   ngOnInit() {
   }
@@ -30,6 +33,14 @@ export class OchoPage implements OnInit {
       this.mensajeAlerta("El valor de la nota 3 no es valido.");
     else{
       this.promedio = (nota1 + nota2 + nota3) / 3;
+
+      const toast = await this.toastController.create({
+        message   : "Tu Promedio Final Es :" + Math.round(this.promedio) ,
+        duration  : 3000,
+        position  : 'bottom',
+        color     : 'medium'
+      });
+      await toast.present();
     }
 
 
@@ -44,5 +55,10 @@ export class OchoPage implements OnInit {
       buttons   : ['Aceptar'],
     });
     await alerta.present();
+  }
+
+  enviarMenu()
+  {
+    this.router.navigate(['/menu']);
   }
 }

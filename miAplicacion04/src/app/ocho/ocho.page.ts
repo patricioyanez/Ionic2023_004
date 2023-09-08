@@ -10,7 +10,7 @@ export class OchoPage implements OnInit {
   n1: string = '';
   n2: string = '';
   n3: string = '';
-  promedio = 0;
+  promedio :any;
   
   constructor(private alertController:AlertController ) { }
 

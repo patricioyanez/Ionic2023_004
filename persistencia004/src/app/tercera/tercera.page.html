@@ -6,6 +6,12 @@
 
 <ion-content [fullscreen]="true">
   <!-- Ejercicio: Listar nombre e imagen de las personas registradas -->
+  <ion-item *ngFor="let persona of personas" [routerLink]="['/terceradetalle/' + persona.id]">
+    <ion-avatar slot="start">
+      <img [src]="persona.foto" />
+    </ion-avatar>
+    <ion-label>{{persona.nombre}}</ion-label>
+  </ion-item>
 
 
 </ion-content>

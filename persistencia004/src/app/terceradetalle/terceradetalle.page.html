@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>terceradetalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tercera"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Ejercicio: Mostrando toda la info 
+      de la persona encontrada -->
+    <ion-card>
+      <img src="{{persona.foto}}" alt="Imagen no disponible">
+      <ion-card-header>
+        <ion-card-subtitle>Nombre</ion-card-subtitle>
+        <ion-card-title>{{persona.nombre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Id : {{persona.id}}<br>
+        Edad:{{persona.edad}}
+      </ion-card-content>
+    </ion-card>
+    <!-- Ejercicio:
+    Agregar 2 botones para hacer match o no. 
+    Usar toast por si o alert por no -->
+
+
+</ion-content>

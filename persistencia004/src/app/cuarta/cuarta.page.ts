@@ -10,7 +10,7 @@ export class CuartaPage implements OnInit {
   constructor(private storage: Storage) { }
 
   ngOnInit() {
-
+    this.storage.create();
   }
   agregar()
   {

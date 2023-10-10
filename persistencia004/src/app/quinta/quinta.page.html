@@ -40,7 +40,7 @@
       <ion-fab-button (click)="guardar()"><ion-icon name="pencil-outline"></ion-icon></ion-fab-button>
       <ion-fab-button (click)="leer()"><ion-icon name="search-outline"></ion-icon></ion-fab-button>
       <ion-fab-button (click)="eliminar()"><ion-icon name="remove-outline"></ion-icon></ion-fab-button>
-      <ion-fab-button><ion-icon name="list-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/quintalistado']"><ion-icon name="list-outline"></ion-icon></ion-fab-button>
     </ion-fab-list>
     <ion-fab-list side="top">
       <ion-fab-button (click)="limpiar()"><ion-icon name="trash-outline"></ion-icon></ion-fab-button>

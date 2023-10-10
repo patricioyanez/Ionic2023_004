@@ -1,13 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>quintalistado</ion-title>
+    <ion-title>Listado de usuarios</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="quinta"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">quintalistado</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h2>Habilitar el click en cada item de la lista y
+    cargar a la persona seleccionada en la pagina quinta
+  </h2>
+  <ion-list>
+    <ion-item *ngFor="let persona of personas">
+      <ion-label>{{persona.rut}}</ion-label>
+      <ion-label>{{persona.nombre}}</ion-label>
+      <ion-label>{{persona.correo}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

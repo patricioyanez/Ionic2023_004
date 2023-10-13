@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from './crud.service';
 import { ToastController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quinta',
@@ -10,9 +11,14 @@ import { ToastController } from '@ionic/angular';
 export class QuintaPage implements OnInit {
   persona: any = [];
   constructor(private crud: CrudService,
-              private toast: ToastController) { }
+              private toast: ToastController,
+              private activated: ActivatedRoute) { }
 
   ngOnInit() {
+    this.activated.paramMap.subscribe(x =>{
+      const id = x.get('id')??'';
+      this.persona = this.crud.leer(id).then(x=> this.persona = x)
+    })
   }
   async guardar()
   {    

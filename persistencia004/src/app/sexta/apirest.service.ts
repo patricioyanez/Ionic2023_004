@@ -9,11 +9,12 @@ export class ApirestService {
   listado : any = []
   constructor(private http: HttpClient) { }
 
-  getUsers()
+  async getUsers()
   {
     const url = this.urlBaseAPI + 'users';
-    return this.http.get(url).subscribe((data=[]) => {this.listado = data;});
+    await this.http.get(url).subscribe((data=[]) => {this.listado = data;});
+    return this.listado;
   }
-
+  
 }
 

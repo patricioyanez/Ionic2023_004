@@ -11,10 +11,11 @@ export class SextaPage implements OnInit {
   constructor(private api : ApirestService) { }
 
   ngOnInit() {
+    this.listar();
   }
-  listar()
+  async listar()
   {
-    this.api.getUsers();
-    this.usuarios = this.api.listado;
+    this.usuarios = await this.api.getUsers();
+    //this.usuarios = this.api.listado;
   }
 }

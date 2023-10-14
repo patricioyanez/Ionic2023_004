@@ -11,7 +11,9 @@
   <ion-button (click)="listar()">
     <ion-icon slot="icon-only" name="list-outline"></ion-icon>
   </ion-button>
-
+  <ion-button (click)="usuarios=[]">
+    <ion-icon slot="icon-only" name="trash"></ion-icon>
+  </ion-button>
   <ion-list>
     <ion-item *ngFor="let usuario of usuarios">
       <ion-label>{{usuario.username}}</ion-label>

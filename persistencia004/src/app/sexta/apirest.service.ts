@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApirestService {
   private urlBaseAPI = 'https://jsonplaceholder.typicode.com/';
   listado : any = []
+  posts : any = []
   constructor(private http: HttpClient) { }
 
   async getUsers()
@@ -17,9 +18,9 @@ export class ApirestService {
   }
   async getUserPosts(id:string)
   {
+    this.posts = [];
     const url = this.urlBaseAPI + 'users/' + id + '/posts';
-    await this.http.get(url).subscribe((data=[]) => {this.listado = data;});
-    return this.listado;
+    this.http.get(url).subscribe((data=[]) => {this.posts = data;});
   }
   
 }

@@ -22,6 +22,6 @@ export class ApirestService {
     const url = this.urlBaseAPI + 'users/' + id + '/posts';
     this.http.get(url).subscribe((data=[]) => {this.posts = data;});
   }
-  
+  // Ejercicio 15: mostrar todos los comentarios del post seleccionado
 }
 

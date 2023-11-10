@@ -18,7 +18,7 @@ export class SeptimaPage implements OnInit {
   division(n1:number, n2:number)
   {
     if(n2==0)
-      return 0;
+      return undefined;
     return n1/n2;
   }
 

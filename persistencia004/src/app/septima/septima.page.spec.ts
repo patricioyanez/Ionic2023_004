@@ -39,12 +39,12 @@ describe('************ Página Septima',() =>
   })
 
   it('dividir por 2 numero enteros',()=>{
-    expect(component.division(2,2)).toEqual(1);
+    expect(component.division(6,3)).toEqual(2);
   })
-  it('dividir por numero negativo',()=>{
-    expect(component.division(2,-2)).toBeLessThan(0);
+  it('dividir por 1 numero negativo',()=>{
+    expect(component.division(-10,2)).toBeLessThan(0);
   })
-  it('dividir por numero cero',()=>{
+  it('dividir donde el divisor es cero',()=>{
     expect(component.division(2,0)).toBeUndefined();
   })
   

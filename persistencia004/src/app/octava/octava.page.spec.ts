@@ -28,7 +28,8 @@ describe('====== Pagina octava', ()=>{
   beforeEach(waitForAsync( async()=>{
     await TestBed.configureTestingModule({
       declarations: [OctavaPage],
-      imports: [IonicModule.forRoot(), FormsModule, RouterTestingModule ]
+      imports: [IonicModule.forRoot(), FormsModule, 
+        RouterTestingModule ]
     }).compileComponents();
     fixture = TestBed.createComponent(OctavaPage);
     component = fixture.componentInstance;

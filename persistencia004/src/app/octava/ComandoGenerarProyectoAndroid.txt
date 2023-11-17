@@ -1,0 +1,7 @@
+npm install  @capacitor/core
+npm install @capacitor/cli
+npm install @capacitor/android
+npx cap add android
+
+--- ionic cap sync -- NO usar
+npx cap open android
